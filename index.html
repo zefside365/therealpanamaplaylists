@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025 Politicians' Spotify Playlists</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #1db954;
+            margin-bottom: 30px;
+        }
+        .playlist-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .playlist-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            transition: transform 0.2s;
+        }
+        .playlist-card:hover {
+            transform: translateY(-5px);
+        }
+        .playlist-card h2 {
+            margin: 0 0 10px;
+            color: #191414;
+            font-size: 1.5em;
+        }
+        .playlist-card p {
+            margin: 0 0 15px;
+            font-style: italic;
+            color: #666;
+        }
+        .tracklist {
+            display: none;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .tracklist li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .tracklist li:last-child {
+            border-bottom: none;
+        }
+        .toggle-btn {
+            background-color: #1db954;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+            font-size: 1em;
+        }
+        .toggle-btn:hover {
+            background-color: #17a34a;
+        }
+        @media (max-width: 600px) {
+            .playlist-container {
+                grid-template-columns: 1fr;
+            }
+            .playlist-card {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>2025 Politicians' Spotify Playlists</h1>
+    <div class="playlist-container">
+        <!-- Donald Trump -->
+        <div class="playlist-card">
+            <h2>Donald Trump - Rally Road Tunes</h2>
+            <p>Classic rock and patriotic anthems for the campaign trail.</p>
+            <button class="toggle-btn" onclick="toggleTracklist('trump')">Show Tracklist</button>
+            <ul class="tracklist" id="trump">
+                <li>“Sweet Caroline” – Neil Diamond</li>
+                <li>“Proud to Be an American” – Lee Greenwood</li>
+                <li>“My Way” – Frank Sinatra</li>
+                <li>“Hotel California” – Eagles</li>
+                <li>“NeverEnding Story” – Limahl</li>
+                <li>“Sweet Home Alabama” – Lynyrd Skynyrd</li>
+                <li>“Born in the U.S.A.” – Bruce Springsteen</li>
+            </ul>
+        </div>
+        <!-- JD Vance -->
+        <div class="playlist-card">
+            <h2>JD Vance - Ohio Heartland Hits</h2>
+            <p>Heartland rock and country reflecting Ohio roots.</p>
+            <button class="toggle-btn" onclick="toggleTracklist('vance')">Show Tracklist</button>
+            <ul class="tracklist" id="vance">
+                <li>“Sweet Child O’ Mine” – Guns N’ Roses</li>
+                <li>“Wagon Wheel” – Darius Rucker</li>
+                <li>“Smalltown Boy” – Bronski Beat</li>
+                <li>“Life Is a Highway” – Tom Cochrane</li>
+                <li>“Country Roads” – John Denver</li>
+                <li>“Jack & Diane” – John Mellencamp</li>
+            </ul>
+        </div>
+        <!-- Ron DeSantis -->
+        <div class="playlist-card">
+            <h2>Ron DeSantis - Sunshine State Vibes</h2>
+            <p>Southern rock and Florida beach tunes.</p>
+            <button class="toggle-btn" onclick="toggleTracklist('desantis')">Show Tracklist</button>
+            <ul class="tracklist" id="desantis">
+                <li>“Margaritaville” – Jimmy Buffett</li>
+                <li>“Sweet Home Alabama” – Lynyrd Skynyrd</li>
+                <li>“Flames of Love” – Fancy</li>
+                <li>“Free Bird” – Lynyrd Skynyrd</li>
+                <li>“American Pie” – Don McLean</li>
+                <li>“Miami 2017” – Billy Joel</li>
+                <li>“Old Time Rock & Roll” – Bob Seger</li>
+            </ul>
+        </div>
+        <!-- Gavin Newsom -->
+        <div class="playlist-card">
+            <h2>Gavin Newsom - Golden State Grooves</h2>
+            <p>California classics and progressive pop anthems.</p>
+            <button class="toggle-btn" onclick="toggleTracklist('newsom')">Show Tracklist</button>
+            <ul class="tracklist" id="newsom">
+                <li>“California Dreamin’” – The Mamas & The Papas</li>
+                <li>“Smalltown Boy” – Bronski Beat</li>
+                <li>“NeverEnding Story” – Limahl</li>
+                <li>“Dancing in the Dark” – Bruce Springsteen</li>
+                <li>“Bohemian Rhapsody” – Queen</li>
+                <li>“Viva La Vida” – Coldplay</li>
+                <li>“Good Vibrations” – The Beach Boys</li>
+            </ul>
+        </div>
+        <!-- Chuck Schumer -->
+        <div class="playlist-card">
+            <h2>Chuck Schumer - New York State of Mind</h2>
+            <p>New York-themed hits for the urban Democrat.</p>
+            <button class="toggle-btn" onclick="toggleTracklist('schumer')">Show Tracklist</button>
+            <ul class="tracklist" id="schumer">
+                <li>“New York, New York” – Frank Sinatra</li>
+                <li>“Empire State of Mind” – Jay-Z & Alicia Keys</li>
+                <li>“Uptown Girl” – Billy Joel</li>
+                <li>“Flames of Love” – Fancy</li>
+                <li>“Piano Man” – Billy Joel</li>
+                <li>“New York Minute” – Don Henley</li>
+            </ul>
+        </div>
+        <!-- Greg Abbott -->
+        <div class="playlist-card">
+            <h2>Greg Abbott - Lone Star Jams</h2>
+            <p>Texas country and patriotic Southern tunes.</p>
+            <button class="toggle-btn" onclick="toggleTracklist('abbott')">Show Tracklist</button>
+            <ul class="tracklist" id="abbott">
+                <li>“Sweet Home Alabama” – Lynyrd Skynyrd</li>
+                <li>“Friends in Low Places” – Garth Brooks</li>
+                <li>“Amarillo by Morning” – George Strait</li>
+                <li>“God Bless Texas” – Alan Jackson</li>
+                <li>“Folsom Prison Blues” – Johnny Cash</li>
+                <li>“Blue Eyes Crying in the Rain” – Willie Nelson</li>
+                <li>“NeverEnding Story” – Limahl</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function toggleTracklist(id) {
+            const tracklist = document.getElementById(id);
+            const button = tracklist.previousElementSibling;
+            if (tracklist.style.display === 'block') {
+                tracklist.style.display = 'none';
+                button.textContent = 'Show Tracklist';
+            } else {
+                tracklist.style.display = 'block';
+                button.textContent = 'Hide Tracklist';
+            }
+        }
+    </script>
+</body>
+</html>
