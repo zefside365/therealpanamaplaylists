@@ -62,6 +62,7 @@
             border-radius: 4px;
             cursor: pointer;
             font-size: 0.9em;
+            margin-left: 10px;
         }
         .playlist ul li button:hover {
             background: #1ed760;
@@ -74,6 +75,10 @@
             height: 80px;
             border: none;
             margin-bottom: 8px;
+        }
+        .track-info {
+            display: inline;
+            color: #b3b3b3;
         }
         .noscript-message {
             color: #b3b3b3;
@@ -113,25 +118,25 @@
         <p class="noscript-message">JavaScript is required to load Spotify tracks. Please enable JavaScript in your browser settings.</p>
     </noscript>
 
-    <!-- Playlist 1: Donald Trump (14 tracks) -->
+    <!-- Playlist 1: Donald Trump (14 tracks, updated with artist/song names) -->
     <div class="playlist">
         <h2>Donald Trump's Golden Age Anthems</h2>
         <p>Classic rock and patriotic hits for the 47th President’s bold vision of America.</p>
         <ul>
-            <li><button class="play-button" data-track="2SiXAy7TuUkycRVbbWDEY2">Play Track</button><div class="iframe-container"></div></li>
-            <li><button class="play-button" data-track="6KphEDwbRfxuUmUDy2r6kH">Play Track</button><div class="iframe-container"></div></li>
-            <li><button class="play-button" data-track="7snQQkYa1KFPANpT2BgyrF">Play Track</button><div class="iframe-container"></div></li>
-            <li><button class="play-button" data-track="2X6p0M0k2MByVv3o6N1K6S">Play Track</button><div class="iframe-container"></div></li>
-            <li><button class="play-button" data-track="0WgyC3NMz6zAbxPVnXhSh3">Play Track</button><div class="iframe-container"></div></li>
-            <li><button class="play-button" data-track="2LawezPeJhN4AWuSB0GtAU">Play Track</button><div class="iframe-container"></div></li>
-            <li><button class="play-button" data-track="0WQiFKA9QqyMddw2Z7bF0r">Play Track</button><div class="iframe-container"></div></li>
-            <li><button class="play-button" data-track="3L0IKtP4WqZ1s3nKxW3iT3">Play Track</button><div class="iframe-container"></div></li>
-            <li><button class="play-button" data-track="4BP3bEJL9ZodcH3kEG3r8h">Play Track</button><div class="iframe-container"></div></li>
-            <li><button class="play-button" data-track="3G0yz3kiUhP3v7c0uGvVfF">Play Track</button><div class="iframe-container"></div></li>
-            <li><button class="play-button" data-track="2D0BaTfi3M3K1Z5gW3rX2r">Play Track</button><div class="iframe-container"></div></li>
-            <li><button class="play-button" data-track="7MAibcTli4IisCtbHKrGMh">Play Track</button><div class="iframe-container"></div></li>
-            <li><button class="play-button" data-track="4uGIJG1jY5A9V6SRMt2rF9">Play Track</button><div class="iframe-container"></div></li>
-            <li><button class="play-button" data-track="7zACUQbWQxzT4Ya2cA7vci">Play Track</button><div class="iframe-container"></div></li>
+            <li><span class="track-info">Creedence Clearwater Revival - Have You Ever Seen the Rain</span><button class="play-button" data-track="2SiXAy7TuUkycRVbbWDEY2">Play Track</button><div class="iframe-container"></div></li>
+            <li><span class="track-info">Silk Sonic - Leave the Door Open</span><button class="play-button" data-track="7MAibcTli4IisCtbHKrGMh">Play Track</button><div class="iframe-container"></div></li>
+            <li><span class="track-info">Bruce Springsteen - Born in the U.S.A.</span><button class="play-button" data-track="0dOg1ySSI7NkpAeGv66Qf0">Play Track</button><div class="iframe-container"></div></li>
+            <li><span class="track-info">The Rolling Stones - Sweet Virginia</span><button class="play-button" data-track="2yVJ7pZ1gZdxP2ZjgK1d3">Play Track</button><div class="iframe-container"></div></li>
+            <li><span class="track-info">Lynyrd Skynyrd - Sweet Home Alabama</span><button class="play-button" data-track="7e89621JPkKae49nUNRaM0">Play Track</button><div class="iframe-container"></div></li>
+            <li><span class="track-info">Tom Petty - American Girl</span><button class="play-button" data-track="7MRyJPksH3G2Q4Jo6IlHBs">Play Track</button><div class="iframe-container"></div></li>
+            <li><span class="track-info">John Mellencamp - Pink Houses</span><button class="play-button" data-track="3dI4wI6jQe6nEEn3p3vSU">Play Track</button><div class="iframe-container"></div></li>
+            <li><span class="track-info">Aerosmith - Dream On</span><button class="play-button" data-track="5kS5bV4s2L9R9M9aFPAZm">Play Track</button><div class="iframe-container"></div></li>
+            <li><span class="track-info">The Eagles - Hotel California</span><button class="play-button" data-track="40riOy7x9W7GXjyGp4pjAv">Play Track</button><div class="iframe-container"></div></li>
+            <li><span class="track-info">Journey - Don’t Stop Believin’</span><button class="play-button" data-track="4bHsxqR3GMrXTxEPLuK5ue">Play Track</button><div class="iframe-container"></div></li>
+            <li><span class="track-info">Lee Greenwood - God Bless the U.S.A.</span><button class="play-button" data-track="4iJLPZvgcVuVFDHLQv7lVB">Play Track</button><div class="iframe-container"></div></li>
+            <li><span class="track-info">Kid Rock - American Bad Ass</span><button class="play-button" data-track="6Z5qV6vB5tXgF8gS5hR1l">Play Track</button><div class="iframe-container"></div></li>
+            <li><span class="track-info">Toby Keith - Courtesy of the Red, White and Blue</span><button class="play-button" data-track="1Xhdy9d1Zer1I2Zwr0SAD3">Play Track</button><div class="iframe-container"></div></li>
+            <li><span class="track-info">Neil Young - Rockin’ in the Free World</span><button class="play-button" data-track="2C3X2BZsPZ9Kx4tXYvFFW">Play Track</button><div class="iframe-container"></div></li>
         </ul>
     </div>
 
