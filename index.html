@@ -54,11 +54,31 @@
             padding: 8px 0;
             break-inside: avoid;
         }
+        .playlist ul li button {
+            background: #1db954;
+            color: #121212;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9em;
+        }
+        .playlist ul li button:hover {
+            background: #1ed760;
+        }
+        .playlist ul li .iframe-container {
+            margin-top: 8px;
+        }
         .playlist ul li iframe {
             width: 100%;
             height: 80px;
             border: none;
             margin-bottom: 8px;
+        }
+        .noscript-message {
+            color: #b3b3b3;
+            text-align: center;
+            font-size: 0.9em;
         }
         a {
             color: #1db954;
@@ -88,27 +108,30 @@
 </head>
 <body>
     <h1>Spotify Playlists for U.S. Political Leaders</h1>
-    <p class="subtitle">Curated playlists capturing the vibes of top figures in the White House and 119th Congress, as of August 2025. Play tracks directly below!</p>
+    <p class="subtitle">Curated playlists capturing the vibes of top figures in the White House and 119th Congress, as of August 2025. Click "Play Track" to load each song!</p>
+    <noscript>
+        <p class="noscript-message">JavaScript is required to load Spotify tracks. Please enable JavaScript in your browser settings.</p>
+    </noscript>
 
     <!-- Playlist 1: Donald Trump (14 tracks) -->
     <div class="playlist">
         <h2>Donald Trump's Golden Age Anthems</h2>
         <p>Classic rock and patriotic hits for the 47th President’s bold vision of America.</p>
         <ul>
-            <li><iframe src="https://open.spotify.com/embed/track/2SiXAy7TuUkycRVbbWDEY2" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/6KphEDwbRfxuUmUDy2r6kH" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/7snQQkYa1KFPANpT2BgyrF" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/2X6p0M0k2MByVv3o6N1K6S" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/0WgyC3NMz6zAbxPVnXhSh3" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/2LawezPeJhN4AWuSB0GtAU" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/0WQiFKA9QqyMddw2Z7bF0r" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/3L0IKtP4WqZ1s3nKxW3iT3" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/4BP3bEJL9ZodcH3kEG3r8h" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/3G0yz3kiUhP3v7c0uGvVfF" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/2D0BaTfi3M3K1Z5gW3rX2r" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/7MAibcTli4IisCtbHKrGMh" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/4uGIJG1jY5A9V6SRMt2rF9" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/7zACUQbWQxzT4Ya2cA7vci" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
+            <li><button class="play-button" data-track="2SiXAy7TuUkycRVbbWDEY2">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="6KphEDwbRfxuUmUDy2r6kH">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="7snQQkYa1KFPANpT2BgyrF">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="2X6p0M0k2MByVv3o6N1K6S">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="0WgyC3NMz6zAbxPVnXhSh3">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="2LawezPeJhN4AWuSB0GtAU">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="0WQiFKA9QqyMddw2Z7bF0r">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="3L0IKtP4WqZ1s3nKxW3iT3">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="4BP3bEJL9ZodcH3kEG3r8h">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="3G0yz3kiUhP3v7c0uGvVfF">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="2D0BaTfi3M3K1Z5gW3rX2r">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="7MAibcTli4IisCtbHKrGMh">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="4uGIJG1jY5A9V6SRMt2rF9">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="7zACUQbWQxzT4Ya2cA7vci">Play Track</button><div class="iframe-container"></div></li>
         </ul>
     </div>
 
@@ -117,18 +140,18 @@
         <h2>JD Vance's Heartland Hustle</h2>
         <p>Country and rock for the Vice President’s Ohio roots and populist energy.</p>
         <ul>
-            <li><iframe src="https://open.spotify.com/embed/track/6L3SBeMPwU7gHNq2q9ry4f" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/7M1XvY0SkmYh7b4fjs1G9y" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/0cQeKguO2G6Y0q3T4zV7Vo" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/4VxuFoeGTWDf69rN2Kx9C3" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/2L6orAlM2gW2nQhSyF0UJD" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/4N0B7XKpE2jEytUfk2hQAZ" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/6iWMI5oOhWrDbLbQTeP5AC" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/3SIlHOEUmG4V9F0T0e5wR4" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/5mF99RbNLFjw0vI3JkyE3C" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/0AZ6VBWL5fYp6g4zqJxt1m" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/5yR9SXXZ3xTitNoO1bLnxg" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/7D5o9hgyS5A4g4w3lqeJ3W" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
+            <li><button class="play-button" data-track="6L3SBeMPwU7gHNq2q9ry4f">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="7M1XvY0SkmYh7b4fjs1G9y">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="0cQeKguO2G6Y0q3T4zV7Vo">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="4VxuFoeGTWDf69rN2Kx9C3">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="2L6orAlM2gW2nQhSyF0UJD">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="4N0B7XKpE2jEytUfk2hQAZ">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="6iWMI5oOhWrDbLbQTeP5AC">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="3SIlHOEUmG4V9F0T0e5wR4">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="5mF99RbNLFjw0vI3JkyE3C">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="0AZ6VBWL5fYp6g4zqJxt1m">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="5yR9SXXZ3xTitNoO1bLnxg">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="7D5o9hgyS5A4g4w3lqeJ3W">Play Track</button><div class="iframe-container"></div></li>
         </ul>
     </div>
 
@@ -137,19 +160,19 @@
         <h2>Marco Rubio's Miami Heat</h2>
         <p>Latin pop and dance tracks for the Secretary of State’s Florida flair.</p>
         <ul>
-            <li><iframe src="https://open.spotify.com/embed/track/2gV9H0p3jSOKp7v2n0eA2H" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/5vdp5UmvTsnMEMESIF2Ym7" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/2iuZJX9X9P0GKaE93xcPjk" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/1V2kwsrL5nAj0ZfM9fQ8v8" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/6nek1NWI79eS5aPqAbTQL0" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/7yguJ7ZEOI4rW3iO1IGnkJ" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/6rPO02ozF3bM7QQ8mNLZr8" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/3xgT3xIlFGqh8TRWv2eoXj" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/7iQXYTyuG13aoeHxGG28Nh" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/0JiY190vktuhSGN6MIvF0V" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/0F8EKudR5e8l5t6pnfP6E5" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/2B94bbI4Z3ZPPd9jrc86Vs" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/4uGIJG1jY5A9V6SRMt2rF9" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
+            <li><button class="play-button" data-track="2gV9H0p3jSOKp7v2n0eA2H">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="5vdp5UmvTsnMEMESIF2Ym7">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="2iuZJX9X9P0GKaE93xcPjk">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="1V2kwsrL5nAj0ZfM9fQ8v8">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="6nek1NWI79eS5aPqAbTQL0">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="7yguJ7ZEOI4rW3iO1IGnkJ">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="6rPO02ozF3bM7QQ8mNLZr8">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="3xgT3xIlFGqh8TRWv2eoXj">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="7iQXYTyuG13aoeHxGG28Nh">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="0JiY190vktuhSGN6MIvF0V">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="0F8EKudR5e8l5t6pnfP6E5">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="2B94bbI4Z3ZPPd9jrc86Vs">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="4uGIJG1jY5A9V6SRMt2rF9">Play Track</button><div class="iframe-container"></div></li>
         </ul>
     </div>
 
@@ -158,21 +181,21 @@
         <h2>Pete Hegseth's Battle Hymns</h2>
         <p>Hard rock and patriotic anthems for the Defense Secretary’s military spirit.</p>
         <ul>
-            <li><iframe src="https://open.spotify.com/embed/track/0gmbgMuw5R3fm3vWnxW0uM" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/2g7g9QIbH3I3r2MGFDT0BV" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/6YffA2mKh0Qe6f0r2hSYmN" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/4a6q8smpoS0L0k1s7q2j0E" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/2SiXAy7TuUkycRVbbWDEY2" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/2z5kHRc6GvzP9L6CWEcXgC" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/0iOZMNEaW5f0MCR82P7v0r" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/7G4V0FYM1e0Srb16t2dB0U" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/2X6p0M0k2MByVv3o6N1K6S" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/2iXcvnD3d1gfLBum0cqi1l" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/3aCnOFL1vGWuUhExN5yFGT" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/3KfbEIOC7YIv90FIfNSZpo" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/0J2LeLJv69qUpBviE5yT1m" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/0qJeyYAgv6UpveH3cUIhK5" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/6gZVQv3zo8DyB1N3t2dB0U" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
+            <li><button class="play-button" data-track="0gmbgMuw5R3fm3vWnxW0uM">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="2g7g9QIbH3I3r2MGFDT0BV">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="6YffA2mKh0Qe6f0r2hSYmN">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="4a6q8smpoS0L0k1s7q2j0E">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="2SiXAy7TuUkycRVbbWDEY2">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="2z5kHRc6GvzP9L6CWEcXgC">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="0iOZMNEaW5f0MCR82P7v0r">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="7G4V0FYM1e0Srb16t2dB0U">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="2X6p0M0k2MByVv3o6N1K6S">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="2iXcvnD3d1gfLBum0cqi1l">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="3aCnOFL1vGWuUhExN5yFGT">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="3KfbEIOC7YIv90FIfNSZpo">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="0J2LeLJv69qUpBviE5yT1m">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="0qJeyYAgv6UpveH3cUIhK5">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="6gZVQv3zo8DyB1N3t2dB0U">Play Track</button><div class="iframe-container"></div></li>
         </ul>
     </div>
 
@@ -181,16 +204,16 @@
         <h2>Pam Bondi's Justice Jams</h2>
         <p>Rock and soul for the Attorney General’s tough-on-crime Florida vibe.</p>
         <ul>
-            <li><iframe src="https://open.spotify.com/embed/track/7oHwi3a3Vr3S5qpowc8XIr" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/6gVZNQv3zo8DyB1N3t2dB0U" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/7LygtNjQ65PSCYkV1d03Yj" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/4hO7YvT88EgCIzU4X3F0nM" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/4BP3bEJL9ZodcH3kEG3r8h" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/1gVgkQ6rvu1V4vQ3s2mJaC" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/7snQQkYa1KFPANpT2BgyrF" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/1DIXPcTDzTj8ZMHsK6T2Eu" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/3MrRksHupTVEQ7YbA0FsZK" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/4pZyD7DrcW0XQS1e4kZ3iW" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
+            <li><button class="play-button" data-track="7oHwi3a3Vr3S5qpowc8XIr">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="6gVZNQv3zo8DyB1N3t2dB0U">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="7LygtNjQ65PSCYkV1d03Yj">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="4hO7YvT88EgCIzU4X3F0nM">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="4BP3bEJL9ZodcH3kEG3r8h">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="1gVgkQ6rvu1V4vQ3s2mJaC">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="7snQQkYa1KFPANpT2BgyrF">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="1DIXPcTDzTj8ZMHsK6T2Eu">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="3MrRksHupTVEQ7YbA0FsZK">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="4pZyD7DrcW0XQS1e4kZ3iW">Play Track</button><div class="iframe-container"></div></li>
         </ul>
     </div>
 
@@ -199,18 +222,18 @@
         <h2>Doug Burgum's Prairie Power</h2>
         <p>Country and folk for the Interior Secretary’s North Dakota roots.</p>
         <ul>
-            <li><iframe src="https://open.spotify.com/embed/track/2SiXAy7TuUkycRVbbWDEY2" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/3aCnOFL1vGWuUhExN5yFGT" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/5yR9SXXZ3xTitNoO1bLnxg" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/3bY4sLq8WSw2v3F1ZPxB74" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/6L3SBeMPwU7gHNq2q9ry4f" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/4VxuFoeGTWDf69rN2Kx9C3" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/0cQeKguO2G6Y0q3T4zV7Vo" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/2B94bbI4Z3ZPPd9jrc86Vs" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/7zACUQbWQxzT4Ya2cA7vci" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/2aJDlNr0u0y3HSAkl0XlpW" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/1DIXPcTDzTj8ZMHsK6T2Eu" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/4uGIJG1jY5A9V6SRMt2rF9" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
+            <li><button class="play-button" data-track="2SiXAy7TuUkycRVbbWDEY2">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="3aCnOFL1vGWuUhExN5yFGT">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="5yR9SXXZ3xTitNoO1bLnxg">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="3bY4sLq8WSw2v3F1ZPxB74">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="6L3SBeMPwU7gHNq2q9ry4f">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="4VxuFoeGTWDf69rN2Kx9C3">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="0cQeKguO2G6Y0q3T4zV7Vo">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="2B94bbI4Z3ZPPd9jrc86Vs">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="7zACUQbWQxzT4Ya2cA7vci">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="2aJDlNr0u0y3HSAkl0XlpW">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="1DIXPcTDzTj8ZMHsK6T2Eu">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="4uGIJG1jY5A9V6SRMt2rF9">Play Track</button><div class="iframe-container"></div></li>
         </ul>
     </div>
 
@@ -219,20 +242,20 @@
         <h2>Brooke Rollins' Texas Harvest</h2>
         <p>Country and Southern rock for the Agriculture Secretary’s Lone Star energy.</p>
         <ul>
-            <li><iframe src="https://open.spotify.com/embed/track/3aCnOFL1vGWuUhExN5yFGT" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/2SiXAy7TuUkycRVbbWDEY2" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/4VxuFoeGTWDf69rN2Kx9C3" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/0WQiFKA9QqyMddw2Z7bF0r" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/6iWMI5oOhWrDbLbQTeP5AC" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/3bY4sLq8WSw2v3F1ZPxB74" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/5mF99RbNLFjw0vI3JkyE3C" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/2B94bbI4Z3ZPPd9jrc86Vs" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/6L3SBeMPwU7gHNq2q9ry4f" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/2aJDlNr0u0y3HSAkl0XlpW" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/1DIXPcTDzTj8ZMHsK6T2Eu" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/7zACUQbWQxzT4Ya2cA7vci" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/4N0B7XKpE2jEytUfk2hQAZ" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/0cQeKguO2G6Y0q3T4zV7Vo" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
+            <li><button class="play-button" data-track="3aCnOFL1vGWuUhExN5yFGT">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="2SiXAy7TuUkycRVbbWDEY2">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="4VxuFoeGTWDf69rN2Kx9C3">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="0WQiFKA9QqyMddw2Z7bF0r">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="6iWMI5oOhWrDbLbQTeP5AC">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="3bY4sLq8WSw2v3F1ZPxB74">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="5mF99RbNLFjw0vI3JkyE3C">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="2B94bbI4Z3ZPPd9jrc86Vs">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="6L3SBeMPwU7gHNq2q9ry4f">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="2aJDlNr0u0y3HSAkl0XlpW">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="1DIXPcTDzTj8ZMHsK6T2Eu">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="7zACUQbWQxzT4Ya2cA7vci">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="4N0B7XKpE2jEytUfk2hQAZ">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="0cQeKguO2G6Y0q3T4zV7Vo">Play Track</button><div class="iframe-container"></div></li>
         </ul>
     </div>
 
@@ -241,17 +264,17 @@
         <h2>Howard Lutnick's Wall Street Groove</h2>
         <p>Pop and classic hits for the Commerce Secretary’s New York hustle.</p>
         <ul>
-            <li><iframe src="https://open.spotify.com/embed/track/2D0BaTfi3M3K1Z5gW3rX2r" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/4uGIJG1jY5A9V6SRMt2rF9" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/3H0bXU0D5qV3n0fW3C1tW" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/4CJVkjo5WpmUAKpm03R33r" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/7r1zOtrgO3o5vW3iO1IGnkJ" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/4uUG5RXrOk84mYEfFvj3cK" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/2aJDlNr0u0y3HSAkl0XlpW" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/3MrRksHupTVEQ7YbA0FsZK" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/1gVgkQ6rvu1V4vQ3s2mJaC" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/7oHwi3a3Vr3S5qpowc8XIr" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/4hO7YvT88EgCIzU4X3F0nM" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
+            <li><button class="play-button" data-track="2D0BaTfi3M3K1Z5gW3rX2r">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="4uGIJG1jY5A9V6SRMt2rF9">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="3H0bXU0D5qV3n0fW3C1tW">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="4CJVkjo5WpmUAKpm03R33r">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="7r1zOtrgO3o5vW3iO1IGnkJ">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="4uUG5RXrOk84mYEfFvj3cK">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="2aJDlNr0u0y3HSAkl0XlpW">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="3MrRksHupTVEQ7YbA0FsZK">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="1gVgkQ6rvu1V4vQ3s2mJaC">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="7oHwi3a3Vr3S5qpowc8XIr">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="4hO7YvT88EgCIzU4X3F0nM">Play Track</button><div class="iframe-container"></div></li>
         </ul>
     </div>
 
@@ -260,19 +283,19 @@
         <h2>Lori Chavez-DeRemer's Pacific Pulse</h2>
         <p>Indie and pop for the Labor Secretary’s Oregon optimism.</p>
         <ul>
-            <li><iframe src="https://open.spotify.com/embed/track/2B94bbI4Z3ZPPd9jrc86Vs" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/0cQeKguO2G6Y0q3T4zV7Vo" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/4N0B7XKpE2jEytUfk2hQAZ" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/5yR9SXXZ3xTitNoO1bLnxg" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/6L3SBeMPwU7gHNq2q9ry4f" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/2SiXAy7TuUkycRVbbWDEY2" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/4uGIJG1jY5A9V6SRMt2rF9" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/7r1zOtrgO3o5vW3iO1IGnkJ" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/3H0bXU0D5qV3n0fW3C1tW" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/4CJVkjo5WpmUAKpm03R33r" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/7oHwi3a3Vr3S5qpowc8XIr" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/2aJDlNr0u0y3HSAkl0XlpW" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/1DIXPcTDzTj8ZMHsK6T2Eu" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
+            <li><button class="play-button" data-track="2B94bbI4Z3ZPPd9jrc86Vs">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="0cQeKguO2G6Y0q3T4zV7Vo">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="4N0B7XKpE2jEytUfk2hQAZ">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="5yR9SXXZ3xTitNoO1bLnxg">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="6L3SBeMPwU7gHNq2q9ry4f">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="2SiXAy7TuUkycRVbbWDEY2">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="4uGIJG1jY5A9V6SRMt2rF9">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="7r1zOtrgO3o5vW3iO1IGnkJ">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="3H0bXU0D5qV3n0fW3C1tW">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="4CJVkjo5WpmUAKpm03R33r">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="7oHwi3a3Vr3S5qpowc8XIr">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="2aJDlNr0u0y3HSAkl0XlpW">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="1DIXPcTDzTj8ZMHsK6T2Eu">Play Track</button><div class="iframe-container"></div></li>
         </ul>
     </div>
 
@@ -281,16 +304,16 @@
         <h2>RFK Jr.'s Rebel Road</h2>
         <p>Folk and rock for the HHS Secretary’s maverick California spirit.</p>
         <ul>
-            <li><iframe src="https://open.spotify.com/embed/track/4uGIJG1jY5A9V6SRMt2rF9" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/2SiXAy7TuUkycRVbbWDEY2" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/4CJVkjo5WpmUAKpm03R33r" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/7oHwi3a3Vr3S5qpowc8XIr" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/2aJDlNr0u0y3HSAkl0XlpW" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/1DIXPcTDzTj8ZMHsK6T2Eu" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/5yR9SXXZ3xTitNoO1bLnxg" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/0cQeKguO2G6Y0q3T4zV7Vo" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/3H0bXU0D5qV3n0fW3C1tW" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/4uGIJG1jY5A9V6SRMt2rF9" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
+            <li><button class="play-button" data-track="4uGIJG1jY5A9V6SRMt2rF9">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="2SiXAy7TuUkycRVbbWDEY2">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="4CJVkjo5WpmUAKpm03R33r">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="7oHwi3a3Vr3S5qpowc8XIr">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="2aJDlNr0u0y3HSAkl0XlpW">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="1DIXPcTDzTj8ZMHsK6T2Eu">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="5yR9SXXZ3xTitNoO1bLnxg">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="0cQeKguO2G6Y0q3T4zV7Vo">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="3H0bXU0D5qV3n0fW3C1tW">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="4uGIJG1jY5A9V6SRMt2rF9">Play Track</button><div class="iframe-container"></div></li>
         </ul>
     </div>
 
@@ -299,21 +322,21 @@
         <h2>Scott Turner's Texas Revival</h2>
         <p>Soul and country for the HUD Secretary’s community-focused Texas vibe.</p>
         <ul>
-            <li><iframe src="https://open.spotify.com/embed/track/2SiXAy7TuUkycRVbbWDEY2" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/3bY4sLq8WSw2v3F1ZPxB74" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/4CJVkjo5WpmUAKpm03R33r" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/0cQeKguO2G6Y0q3T4zV7Vo" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/7oHwi3a3Vr3S5qpowc8XIr" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/2aJDlNr0u0y3HSAkl0XlpW" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/1DIXPcTDzTj8ZMHsK6T2Eu" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/5yR9SXXZ3xTitNoO1bLnxg" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/4uGIJG1jY5A9V6SRMt2rF9" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/3H0bXU0D5qV3n0fW3C1tW" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/2SiXAy7TuUkycRVbbWDEY2" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/0cQeKguO2G6Y0q3T4zV7Vo" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/7r1zOtrgO3o5vW3iO1IGnkJ" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/4CJVkjo5WpmUAKpm03R33r" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/6gVZNQv3zo8DyB1N3t2dB0U" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
+            <li><button class="play-button" data-track="2SiXAy7TuUkycRVbbWDEY2">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="3bY4sLq8WSw2v3F1ZPxB74">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="4CJVkjo5WpmUAKpm03R33r">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="0cQeKguO2G6Y0q3T4zV7Vo">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="7oHwi3a3Vr3S5qpowc8XIr">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="2aJDlNr0u0y3HSAkl0XlpW">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="1DIXPcTDzTj8ZMHsK6T2Eu">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="5yR9SXXZ3xTitNoO1bLnxg">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="4uGIJG1jY5A9V6SRMt2rF9">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="3H0bXU0D5qV3n0fW3C1tW">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="2SiXAy7TuUkycRVbbWDEY2">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="0cQeKguO2G6Y0q3T4zV7Vo">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="7r1zOtrgO3o5vW3iO1IGnkJ">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="4CJVkjo5WpmUAKpm03R33r">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="6gVZNQv3zo8DyB1N3t2dB0U">Play Track</button><div class="iframe-container"></div></li>
         </ul>
     </div>
 
@@ -322,18 +345,18 @@
         <h2>Sean Duffy's Wisconsin Way</h2>
         <p>Rock and country for the Transportation Secretary’s heartland roots.</p>
         <ul>
-            <li><iframe src="https://open.spotify.com/embed/track/0WgyC3NMz6zAbxPVnXhSh3" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/2LawezPeJhN4AWuSB0GtAU" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/2L6orAlM2gW2nQhSyF0UJD" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/4BP3bEJL9ZodcH3kEG3r8h" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/3G0yz3kiUhP3v7c0uGvVfF" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/7M1XvY0SkmYh7b4fjs1G9y" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/2SiXAy7TuUkycRVbbWDEY2" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/0cQeKguO2G6Y0q3T4zV7Vo" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/4uGIJG1jY5A9V6SRMt2rF9" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/3H0bXU0D5qV3n0fW3C1tW" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/7r1zOtrgO3o5vW3iO1IGnkJ" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/2aJDlNr0u0y3HSAkl0XlpW" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
+            <li><button class="play-button" data-track="0WgyC3NMz6zAbxPVnXhSh3">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="2LawezPeJhN4AWuSB0GtAU">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="2L6orAlM2gW2nQhSyF0UJD">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="4BP3bEJL9ZodcH3kEG3r8h">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="3G0yz3kiUhP3v7c0uGvVfF">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="7M1XvY0SkmYh7b4fjs1G9y">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="2SiXAy7TuUkycRVbbWDEY2">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="0cQeKguO2G6Y0q3T4zV7Vo">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="4uGIJG1jY5A9V6SRMt2rF9">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="3H0bXU0D5qV3n0fW3C1tW">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="7r1zOtrgO3o5vW3iO1IGnkJ">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="2aJDlNr0u0y3HSAkl0XlpW">Play Track</button><div class="iframe-container"></div></li>
         </ul>
     </div>
 
@@ -342,20 +365,20 @@
         <h2>Chris Wright's Energy Surge</h2>
         <p>Rock and blues for the Energy Secretary’s Colorado drive.</p>
         <ul>
-            <li><iframe src="https://open.spotify.com/embed/track/0WQiFKA9QqyMddw2Z7bF0r" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/2SiXAy7TuUkycRVbbWDEY2" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/4uGIJG1jY5A9V6SRMt2rF9" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/6L3SBeMPwU7gHNq2q9ry4f" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/0cQeKguO2G6Y0q3T4zV7Vo" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/3H0bXU0D5qV3n0fW3C1tW" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/2aJDlNr0u0y3HSAkl0XlpW" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/4BP3bEJL9ZodcH3kEG3r8h" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/5yR9SXXZ3xTitNoO1bLnxg" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/7r1zOtrgO3o5vW3iO1IGnkJ" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/3G0yz3kiUhP3v7c0uGvVfF" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/4CJVkjo5WpmUAKpm03R33r" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/0WQiFKA9QqyMddw2Z7bF0r" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/2SiXAy7TuUkycRVbbWDEY2" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
+            <li><button class="play-button" data-track="0WQiFKA9QqyMddw2Z7bF0r">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="2SiXAy7TuUkycRVbbWDEY2">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="4uGIJG1jY5A9V6SRMt2rF9">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="6L3SBeMPwU7gHNq2q9ry4f">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="0cQeKguO2G6Y0q3T4zV7Vo">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="3H0bXU0D5qV3n0fW3C1tW">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="2aJDlNr0u0y3HSAkl0XlpW">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="4BP3bEJL9ZodcH3kEG3r8h">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="5yR9SXXZ3xTitNoO1bLnxg">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="7r1zOtrgO3o5vW3iO1IGnkJ">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="3G0yz3kiUhP3v7c0uGvVfF">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="4CJVkjo5WpmUAKpm03R33r">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="0WQiFKA9QqyMddw2Z7bF0r">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="2SiXAy7TuUkycRVbbWDEY2">Play Track</button><div class="iframe-container"></div></li>
         </ul>
     </div>
 
@@ -364,17 +387,17 @@
         <h2>Linda McMahon's Power Play</h2>
         <p>Pop and rock anthems for the Education Secretary’s bold Connecticut energy.</p>
         <ul>
-            <li><iframe src="https://open.spotify.com/embed/track/7MAibcTli4IisCtbHKrGMh" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/2iXcvnD3d1gfLBum0cqi1l" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/0WgyC3NMz6zAbxPVnXhSh3" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/1gVgkQ6rvu1V4vQ3s2mJaC" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/3G0yz3kiUhP3v7c0uGvVfF" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/3KfbEIOC7YIv90FIfNSZpo" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/2LawezPeJhN4AWuSB0GtAU" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/3MrRksHupTVEQ7YbA0FsZK" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/7oHwi3a3Vr3S5qpowc8XIr" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/7snQQkYa1KFPANpT2BgyrF" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/4uGIJG1jY5A9V6SRMt2rF9" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
+            <li><button class="play-button" data-track="7MAibcTli4IisCtbHKrGMh">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="2iXcvnD3d1gfLBum0cqi1l">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="0WgyC3NMz6zAbxPVnXhSh3">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="1gVgkQ6rvu1V4vQ3s2mJaC">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="3G0yz3kiUhP3v7c0uGvVfF">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="3KfbEIOC7YIv90FIfNSZpo">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="2LawezPeJhN4AWuSB0GtAU">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="3MrRksHupTVEQ7YbA0FsZK">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="7oHwi3a3Vr3S5qpowc8XIr">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="7snQQkYa1KFPANpT2BgyrF">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="4uGIJG1jY5A9V6SRMt2rF9">Play Track</button><div class="iframe-container"></div></li>
         </ul>
     </div>
 
@@ -383,18 +406,18 @@
         <h2>Susie Wiles' Campaign Classics</h2>
         <p>Pop and rock for the White House Chief of Staff’s strategic Florida vibe.</p>
         <ul>
-            <li><iframe src="https://open.spotify.com/embed/track/3L0IKtP4WqZ1s3nKxW3iT3" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/4BP3bEJL9ZodcH3kEG3r8h" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/7LygtNjQ65PSCYkV1d03Yj" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/3MrRksHupTVEQ7YbA0FsZK" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/2SiXAy7TuUkycRVbbWDEY2" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/4uGIJG1jY5A9V6SRMt2rF9" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/1gVgkQ6rvu1V4vQ3s2mJaC" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/7oHwi3a3Vr3S5qpowc8XIr" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/7snQQkYa1KFPANpT2BgyrF" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/2aJDlNr0u0y3HSAkl0XlpW" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/3H0bXU0D5qV3n0fW3C1tW" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/0cQeKguO2G6Y0q3T4zV7Vo" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
+            <li><button class="play-button" data-track="3L0IKtP4WqZ1s3nKxW3iT3">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="4BP3bEJL9ZodcH3kEG3r8h">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="7LygtNjQ65PSCYkV1d03Yj">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="3MrRksHupTVEQ7YbA0FsZK">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="2SiXAy7TuUkycRVbbWDEY2">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="4uGIJG1jY5A9V6SRMt2rF9">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="1gVgkQ6rvu1V4vQ3s2mJaC">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="7oHwi3a3Vr3S5qpowc8XIr">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="7snQQkYa1KFPANpT2BgyrF">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="2aJDlNr0u0y3HSAkl0XlpW">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="3H0bXU0D5qV3n0fW3C1tW">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="0cQeKguO2G6Y0q3T4zV7Vo">Play Track</button><div class="iframe-container"></div></li>
         </ul>
     </div>
 
@@ -403,20 +426,20 @@
         <h2>Tulsi Gabbard's Island Intel</h2>
         <p>Eclectic and soulful tracks for the Director of National Intelligence’s Hawaii roots.</p>
         <ul>
-            <li><iframe src="https://open.spotify.com/embed/track/2SiXAy7TuUkycRVbbWDEY2" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/0cQeKguO2G6Y0q3T4zV7Vo" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/7r1zOtrgO3o5vW3iO1IGnkJ" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/4uGIJG1jY5A9V6SRMt2rF9" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/3H0bXU0D5qV3n0fW3C1tW" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/2aJDlNr0u0y3HSAkl0XlpW" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/5yR9SXXZ3xTitNoO1bLnxg" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/4CJVkjo5WpmUAKpm03R33r" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/7oHwi3a3Vr3S5qpowc8XIr" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/1DIXPcTDzTj8ZMHsK6T2Eu" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/0WQiFKA9QqyMddw2Z7bF0r" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/2SiXAy7TuUkycRVbbWDEY2" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/4uGIJG1jY5A9V6SRMt2rF9" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/3H0bXU0D5qV3n0fW3C1tW" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
+            <li><button class="play-button" data-track="2SiXAy7TuUkycRVbbWDEY2">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="0cQeKguO2G6Y0q3T4zV7Vo">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="7r1zOtrgO3o5vW3iO1IGnkJ">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="4uGIJG1jY5A9V6SRMt2rF9">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="3H0bXU0D5qV3n0fW3C1tW">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="2aJDlNr0u0y3HSAkl0XlpW">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="5yR9SXXZ3xTitNoO1bLnxg">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="4CJVkjo5WpmUAKpm03R33r">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="7oHwi3a3Vr3S5qpowc8XIr">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="1DIXPcTDzTj8ZMHsK6T2Eu">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="0WQiFKA9QqyMddw2Z7bF0r">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="2SiXAy7TuUkycRVbbWDEY2">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="4uGIJG1jY5A9V6SRMt2rF9">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="3H0bXU0D5qV3n0fW3C1tW">Play Track</button><div class="iframe-container"></div></li>
         </ul>
     </div>
 
@@ -425,19 +448,19 @@
         <h2>Mike Johnson's Louisiana Jukebox</h2>
         <p>Country and Southern rock for the House Speaker’s conservative heartland vibe.</p>
         <ul>
-            <li><iframe src="https://open.spotify.com/embed/track/6iWMI5oOhWrDbLbQTeP5AC" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/2SiXAy7TuUkycRVbbWDEY2" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/6L3SBeMPwU7gHNq2q9ry4f" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/0WQiFKA9QqyMddw2Z7bF0r" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/0cQeKguO2G6Y0q3T4zV7Vo" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/4uGIJG1jY5A9V6SRMt2rF9" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/3H0bXU0D5qV3n0fW3C1tW" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/2aJDlNr0u0y3HSAkl0XlpW" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/7r1zOtrgO3o5vW3iO1IGnkJ" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/5yR9SXXZ3xTitNoO1bLnxg" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/4CJVkjo5WpmUAKpm03R33r" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/1DIXPcTDzTj8ZMHsK6T2Eu" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/2SiXAy7TuUkycRVbbWDEY2" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
+            <li><button class="play-button" data-track="6iWMI5oOhWrDbLbQTeP5AC">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="2SiXAy7TuUkycRVbbWDEY2">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="6L3SBeMPwU7gHNq2q9ry4f">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="0WQiFKA9QqyMddw2Z7bF0r">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="0cQeKguO2G6Y0q3T4zV7Vo">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="4uGIJG1jY5A9V6SRMt2rF9">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="3H0bXU0D5qV3n0fW3C1tW">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="2aJDlNr0u0y3HSAkl0XlpW">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="7r1zOtrgO3o5vW3iO1IGnkJ">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="5yR9SXXZ3xTitNoO1bLnxg">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="4CJVkjo5WpmUAKpm03R33r">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="1DIXPcTDzTj8ZMHsK6T2Eu">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="2SiXAy7TuUkycRVbbWDEY2">Play Track</button><div class="iframe-container"></div></li>
         </ul>
     </div>
 
@@ -446,21 +469,21 @@
         <h2>Hakeem Jeffries' Brooklyn Beat</h2>
         <p>Hip-hop and soul for the House Minority Leader’s New York energy.</p>
         <ul>
-            <li><iframe src="https://open.spotify.com/embed/track/3Wrjm47oTz2sSsbK9yN2lN" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/0e7ipj03S05BNilyu5bRzt" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/7KXjTSCq5nL1LoYtL7XAwS" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/1gVgkQ6rvu1V4vQ3s2mJaC" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/4pZyD7DrcW0XQS1e4kZ3iW" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/3MrRksHupTVEQ7YbA0FsZK" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/7oHwi3a3Vr3S5qpowc8XIr" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/2SiXAy7TuUkycRVbbWDEY2" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/4uGIJG1jY5A9V6SRMt2rF9" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/3H0bXU0D5qV3n0fW3C1tW" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/7r1zOtrgO3o5vW3iO1IGnkJ" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/4CJVkjo5WpmUAKpm03R33r" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/1DIXPcTDzTj8ZMHsK6T2Eu" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/5yR9SXXZ3xTitNoO1bLnxg" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/0cQeKguO2G6Y0q3T4zV7Vo" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
+            <li><button class="play-button" data-track="3Wrjm47oTz2sSsbK9yN2lN">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="0e7ipj03S05BNilyu5bRzt">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="7KXjTSCq5nL1LoYtL7XAwS">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="1gVgkQ6rvu1V4vQ3s2mJaC">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="4pZyD7DrcW0XQS1e4kZ3iW">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="3MrRksHupTVEQ7YbA0FsZK">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="7oHwi3a3Vr3S5qpowc8XIr">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="2SiXAy7TuUkycRVbbWDEY2">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="4uGIJG1jY5A9V6SRMt2rF9">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="3H0bXU0D5qV3n0fW3C1tW">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="7r1zOtrgO3o5vW3iO1IGnkJ">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="4CJVkjo5WpmUAKpm03R33r">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="1DIXPcTDzTj8ZMHsK6T2Eu">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="5yR9SXXZ3xTitNoO1bLnxg">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="0cQeKguO2G6Y0q3T4zV7Vo">Play Track</button><div class="iframe-container"></div></li>
         </ul>
     </div>
 
@@ -469,16 +492,16 @@
         <h2>John Thune's Dakota Drive</h2>
         <p>Country and rock for the Senate Majority Leader’s South Dakota roots.</p>
         <ul>
-            <li><iframe src="https://open.spotify.com/embed/track/0cQeKguO2G6Y0q3T4zV7Vo" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/3aCnOFL1vGWuUhExN5yFGT" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/5yR9SXXZ3xTitNoO1bLnxg" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/2SiXAy7TuUkycRVbbWDEY2" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/7zACUQbWQxzT4Ya2cA7vci" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/6L3SBeMPwU7gHNq2q9ry4f" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/1DIXPcTDzTj8ZMHsK6T2Eu" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/3bY4sLq8WSw2v3F1ZPxB74" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/4uGIJG1jY5A9V6SRMt2rF9" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/2aJDlNr0u0y3HSAkl0XlpW" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
+            <li><button class="play-button" data-track="0cQeKguO2G6Y0q3T4zV7Vo">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="3aCnOFL1vGWuUhExN5yFGT">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="5yR9SXXZ3xTitNoO1bLnxg">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="2SiXAy7TuUkycRVbbWDEY2">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="7zACUQbWQxzT4Ya2cA7vci">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="6L3SBeMPwU7gHNq2q9ry4f">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="1DIXPcTDzTj8ZMHsK6T2Eu">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="3bY4sLq8WSw2v3F1ZPxB74">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="4uGIJG1jY5A9V6SRMt2rF9">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="2aJDlNr0u0y3HSAkl0XlpW">Play Track</button><div class="iframe-container"></div></li>
         </ul>
     </div>
 
@@ -487,19 +510,40 @@
         <h2>Chuck Schumer's New York Rhythm</h2>
         <p>Jazz and pop for the Senate Minority Leader’s Big Apple energy.</p>
         <ul>
-            <li><iframe src="https://open.spotify.com/embed/track/4uUG5RXrOk84mYEfFvj3cK" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/2D0BaTfi3M3K1Z5gW3rX2r" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/3H0bXU0D5qV3n0fW3C1tW" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/4CJVkjo5WpmUAKpm03R33r" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/7r1zOtrgO3o5vW3iO1IGnkJ" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/1gVgkQ6rvu1V4vQ3s2mJaC" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/7oHwi3a3Vr3S5qpowc8XIr" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/3MrRksHupTVEQ7YbA0FsZK" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/2SiXAy7TuUkycRVbbWDEY2" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/4uGIJG1jY5A9V6SRMt2rF9" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/5yR9SXXZ3xTitNoO1bLnxg" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
-            <li><iframe src="https://open.spotify.com/embed/track/0cQeKguO2G6Y0q3T4zV7Vo" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
+            <li><button class="play-button" data-track="4uUG5RXrOk84mYEfFvj3cK">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="2D0BaTfi3M3K1Z5gW3rX2r">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="3H0bXU0D5qV3n0fW3C1tW">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="4CJVkjo5WpmUAKpm03R33r">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="7r1zOtrgO3o5vW3iO1IGnkJ">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="1gVgkQ6rvu1V4vQ3s2mJaC">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="7oHwi3a3Vr3S5qpowc8XIr">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="3MrRksHupTVEQ7YbA0FsZK">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="2SiXAy7TuUkycRVbbWDEY2">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="4uGIJG1jY5A9V6SRMt2rF9">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="5yR9SXXZ3xTitNoO1bLnxg">Play Track</button><div class="iframe-container"></div></li>
+            <li><button class="play-button" data-track="0cQeKguO2G6Y0q3T4zV7Vo">Play Track</button><div class="iframe-container"></div></li>
         </ul>
     </div>
+
+    <script>
+        document.querySelectorAll('.play-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const trackId = button.getAttribute('data-track');
+                const container = button.nextElementSibling;
+                if (container.innerHTML === '') {
+                    const iframe = document.createElement('iframe');
+                    iframe.src = `https://open.spotify.com/embed/track/${trackId}`;
+                    iframe.width = '100%';
+                    iframe.height = '80';
+                    iframe.frameBorder = '0';
+                    iframe.allowTransparency = 'true';
+                    iframe.allow = 'encrypted-media';
+                    container.appendChild(iframe);
+                    button.textContent = 'Track Loaded';
+                    button.disabled = true;
+                }
+            });
+        });
+    </script>
 </body>
 </html>
