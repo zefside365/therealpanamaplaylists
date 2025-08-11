@@ -3,192 +3,382 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2025 Politicians' Spotify Playlists</title>
+    <title>Fictional Spotify Playlists for Political Figures</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
+            line-height: 1.6;
             margin: 0;
             padding: 20px;
-            color: #333;
+            background-color: #f4f4f4;
         }
         h1 {
             text-align: center;
-            color: #1db954;
-            margin-bottom: 30px;
+            color: #333;
         }
-        .playlist-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .playlist-card {
-            background-color: white;
+        .playlist {
+            background: #fff;
             border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin: 20px 0;
             padding: 20px;
-            transition: transform 0.2s;
         }
-        .playlist-card:hover {
-            transform: translateY(-5px);
+        .playlist h2 {
+            color: #1db954;
+            margin-top: 0;
         }
-        .playlist-card h2 {
-            margin: 0 0 10px;
-            color: #191414;
-            font-size: 1.5em;
+        .playlist p {
+            color: #555;
         }
-        .playlist-card p {
-            margin: 0 0 15px;
-            font-style: italic;
-            color: #666;
-        }
-        .tracklist {
-            display: none;
+        .playlist ul {
             list-style: none;
             padding: 0;
-            margin: 0;
         }
-        .tracklist li {
-            padding: 8px 0;
-            border-bottom: 1px solid #eee;
-        }
-        .tracklist li:last-child {
-            border-bottom: none;
-        }
-        .toggle-btn {
-            background-color: #1db954;
-            color: white;
-            border: none;
-            padding: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-            width: 100%;
-            text-align: center;
-            font-size: 1em;
-        }
-        .toggle-btn:hover {
-            background-color: #17a34a;
+        .playlist ul li {
+            padding: 5px 0;
+            color: #333;
         }
         @media (max-width: 600px) {
-            .playlist-container {
-                grid-template-columns: 1fr;
-            }
-            .playlist-card {
+            .playlist {
                 padding: 15px;
             }
             h1 {
-                font-size: 1.8em;
+                font-size: 1.5em;
+            }
+            .playlist h2 {
+                font-size: 1.2em;
             }
         }
     </style>
 </head>
 <body>
-    <h1>2025 Politicians' Spotify Playlists</h1>
-    <div class="playlist-container">
-        <!-- Donald Trump -->
-        <div class="playlist-card">
-            <h2>Donald Trump - Rally Road Tunes</h2>
-            <p>Classic rock and patriotic anthems for the campaign trail.</p>
-            <button class="toggle-btn" onclick="toggleTracklist('trump')">Show Tracklist</button>
-            <ul class="tracklist" id="trump">
-                <li>“Sweet Caroline” – Neil Diamond</li>
-                <li>“Proud to Be an American” – Lee Greenwood</li>
-                <li>“My Way” – Frank Sinatra</li>
-                <li>“Hotel California” – Eagles</li>
-                <li>“NeverEnding Story” – Limahl</li>
-                <li>“Sweet Home Alabama” – Lynyrd Skynyrd</li>
-                <li>“Born in the U.S.A.” – Bruce Springsteen</li>
-            </ul>
-        </div>
-        <!-- JD Vance -->
-        <div class="playlist-card">
-            <h2>JD Vance - Ohio Heartland Hits</h2>
-            <p>Heartland rock and country reflecting Ohio roots.</p>
-            <button class="toggle-btn" onclick="toggleTracklist('vance')">Show Tracklist</button>
-            <ul class="tracklist" id="vance">
-                <li>“Sweet Child O’ Mine” – Guns N’ Roses</li>
-                <li>“Wagon Wheel” – Darius Rucker</li>
-                <li>“Smalltown Boy” – Bronski Beat</li>
-                <li>“Life Is a Highway” – Tom Cochrane</li>
-                <li>“Country Roads” – John Denver</li>
-                <li>“Jack & Diane” – John Mellencamp</li>
-            </ul>
-        </div>
-        <!-- Ron DeSantis -->
-        <div class="playlist-card">
-            <h2>Ron DeSantis - Sunshine State Vibes</h2>
-            <p>Southern rock and Florida beach tunes.</p>
-            <button class="toggle-btn" onclick="toggleTracklist('desantis')">Show Tracklist</button>
-            <ul class="tracklist" id="desantis">
-                <li>“Margaritaville” – Jimmy Buffett</li>
-                <li>“Sweet Home Alabama” – Lynyrd Skynyrd</li>
-                <li>“Flames of Love” – Fancy</li>
-                <li>“Free Bird” – Lynyrd Skynyrd</li>
-                <li>“American Pie” – Don McLean</li>
-                <li>“Miami 2017” – Billy Joel</li>
-                <li>“Old Time Rock & Roll” – Bob Seger</li>
-            </ul>
-        </div>
-        <!-- Gavin Newsom -->
-        <div class="playlist-card">
-            <h2>Gavin Newsom - Golden State Grooves</h2>
-            <p>California classics and progressive pop anthems.</p>
-            <button class="toggle-btn" onclick="toggleTracklist('newsom')">Show Tracklist</button>
-            <ul class="tracklist" id="newsom">
-                <li>“California Dreamin’” – The Mamas & The Papas</li>
-                <li>“Smalltown Boy” – Bronski Beat</li>
-                <li>“NeverEnding Story” – Limahl</li>
-                <li>“Dancing in the Dark” – Bruce Springsteen</li>
-                <li>“Bohemian Rhapsody” – Queen</li>
-                <li>“Viva La Vida” – Coldplay</li>
-                <li>“Good Vibrations” – The Beach Boys</li>
-            </ul>
-        </div>
-        <!-- Chuck Schumer -->
-        <div class="playlist-card">
-            <h2>Chuck Schumer - New York State of Mind</h2>
-            <p>New York-themed hits for the urban Democrat.</p>
-            <button class="toggle-btn" onclick="toggleTracklist('schumer')">Show Tracklist</button>
-            <ul class="tracklist" id="schumer">
-                <li>“New York, New York” – Frank Sinatra</li>
-                <li>“Empire State of Mind” – Jay-Z & Alicia Keys</li>
-                <li>“Uptown Girl” – Billy Joel</li>
-                <li>“Flames of Love” – Fancy</li>
-                <li>“Piano Man” – Billy Joel</li>
-                <li>“New York Minute” – Don Henley</li>
-            </ul>
-        </div>
-        <!-- Greg Abbott -->
-        <div class="playlist-card">
-            <h2>Greg Abbott - Lone Star Jams</h2>
-            <p>Texas country and patriotic Southern tunes.</p>
-            <button class="toggle-btn" onclick="toggleTracklist('abbott')">Show Tracklist</button>
-            <ul class="tracklist" id="abbott">
-                <li>“Sweet Home Alabama” – Lynyrd Skynyrd</li>
-                <li>“Friends in Low Places” – Garth Brooks</li>
-                <li>“Amarillo by Morning” – George Strait</li>
-                <li>“God Bless Texas” – Alan Jackson</li>
-                <li>“Folsom Prison Blues” – Johnny Cash</li>
-                <li>“Blue Eyes Crying in the Rain” – Willie Nelson</li>
-                <li>“NeverEnding Story” – Limahl</li>
-            </ul>
-        </div>
+    <h1>Fictional Spotify Playlists for Political Figures</h1>
+    <p style="text-align: center; color: #555;">These are imaginative playlists inspired by the public personas of 25 prominent U.S. political figures currently in the White House or Congress (as of August 2025). Purely fictional and for entertainment purposes only.</p>
+
+    <!-- Playlist 1: Joe Biden -->
+    <div class="playlist">
+        <h2>Joe Biden's "Scranton Roots"</h2>
+        <p>Classic rock and soulful tunes for the Delaware everyman, evoking nostalgia and resilience.</p>
+        <ul>
+            <li>Bruce Springsteen - "Born to Run"</li>
+            <li>Aretha Franklin - "Respect"</li>
+            <li>Tom Petty - "American Girl"</li>
+            <li>Creedence Clearwater Revival - "Fortunate Son"</li>
+            <li>James Taylor - "Sweet Baby James"</li>
+        </ul>
     </div>
 
-    <script>
-        function toggleTracklist(id) {
-            const tracklist = document.getElementById(id);
-            const button = tracklist.previousElementSibling;
-            if (tracklist.style.display === 'block') {
-                tracklist.style.display = 'none';
-                button.textContent = 'Show Tracklist';
-            } else {
-                tracklist.style.display = 'block';
-                button.textContent = 'Hide Tracklist';
-            }
-        }
-    </script>
+    <!-- Playlist 2: Kamala Harris -->
+    <div class="playlist">
+        <h2>Kamala Harris' "West Coast Vibes"</h2>
+        <p>A mix of R&B, hip-hop, and California cool to reflect her Bay Area roots.</p>
+        <ul>
+            <li>Kendrick Lamar - "Alright"</li>
+            <li>Lauryn Hill - "Doo Wop (That Thing)"</li>
+            <li>Tupac Shakur - "California Love"</li>
+            <li>SZA - "Good Days"</li>
+            <li>Earth, Wind & Fire - "September"</li>
+        </ul>
+    </div>
+
+    <!-- Playlist 3: Chuck Schumer -->
+    <div class="playlist">
+        <h2>Chuck Schumer's "New York State of Mind"</h2>
+        <p>Eclectic urban beats and Broadway vibes for the Senate Majority Leader.</p>
+        <ul>
+            <li>Billy Joel - "New York State of Mind"</li>
+            <li>Jay-Z & Alicia Keys - "Empire State of Mind"</li>
+            <li>Frank Sinatra - "Theme from New York, New York"</li>
+            <li>Nas - "N.Y. State of Mind"</li>
+            <li>Simon & Garfunkel - "The 59th Street Bridge Song"</li>
+        </ul>
+    </div>
+
+    <!-- Playlist 4: Mitch McConnell -->
+    <div class="playlist">
+        <h2>Mitch McConnell's "Bluegrass Ballads"</h2>
+        <p>Country and folk tunes for the Kentucky senator with a steady hand.</p>
+        <ul>
+            <li>Johnny Cash - "Ring of Fire"</li>
+            <li>Alison Krauss - "Down to the River to Pray"</li>
+            <li>Chris Stapleton - "Tennessee Whiskey"</li>
+            <li>Bill Monroe - "Blue Moon of Kentucky"</li>
+            <li>The Carter Family - "Wildwood Flower"</li>
+        </ul>
+    </div>
+
+    <!-- Playlist 5: Nancy Pelosi -->
+    <div class="playlist">
+        <h2>Nancy Pelosi's "San Fran Swagger"</h2>
+        <p>Pop and rock anthems for the trailblazing Speaker with a knack for bold moves.</p>
+        <ul>
+            <li>Fleetwood Mac - "Go Your Own Way"</li>
+            <li>Janis Joplin - "Piece of My Heart"</li>
+            <li>Jefferson Airplane - "Somebody to Love"</li>
+            <li>Train - "Drops of Jupiter"</li>
+            <li>Red Hot Chili Peppers - "Californication"</li>
+        </ul>
+    </div>
+
+    <!-- Playlist 6: Kevin McCarthy -->
+    <div class="playlist">
+        <h2>Kevin McCarthy's "Central Valley Jams"</h2>
+        <p>Upbeat country and rock for the California congressman with heartland appeal.</p>
+        <ul>
+            <li>Eagles - "Hotel California"</li>
+            <li>Luke Bryan - "Country Girl (Shake It for Me)"</li>
+            <li>Tom Petty - "Free Fallin'"</li>
+            <li>Merle Haggard - "Okie from Muskogee"</li>
+            <li>Doobie Brothers - "Listen to the Music"</li>
+        </ul>
+    </div>
+
+    <!-- Playlist 7: Alexandria Ocasio-Cortez -->
+    <div class="playlist">
+        <h2>AOC's "Bronx Beat"</h2>
+        <p>Energetic Latin, hip-hop, and pop for the progressive firebrand.</p>
+        <ul>
+            <li>Jennifer Lopez - "On the Floor"</li>
+            <li>Bad Bunny - "Safaera"</li>
+            <li>Cardi B - "Bodak Yellow"</li>
+            <li>Santana - "Smooth" ft. Rob Thomas</li>
+            <li>Rosalia - "Malamente"</li>
+        </ul>
+    </div>
+
+    <!-- Playlist 8: Bernie Sanders -->
+    <div class="playlist">
+        <h2>Bernie Sanders' "Revolutionary Road"</h2>
+        <p>Folk and protest anthems for the Vermont senator's progressive spirit.</p>
+        <ul>
+            <li>Bob Dylan - "Blowin' in the Wind"</li>
+            <li>Woody Guthrie - "This Land Is Your Land"</li>
+            <li>Pete Seeger - "Where Have All the Flowers Gone?"</li>
+            <li>Joan Baez - "We Shall Overcome"</li>
+            <li>Tracy Chapman - "Talkin' Bout a Revolution"</li>
+        </ul>
+    </div>
+
+    <!-- Playlist 9: Ted Cruz -->
+    <div class="playlist">
+        <h2>Ted Cruz's "Lone Star Anthems"</h2>
+        <p>Texas-sized rock and country for the outspoken senator.</p>
+        <ul>
+            <li>ZZ Top - "La Grange"</li>
+            <li>George Strait - "All My Ex's Live in Texas"</li>
+            <li>Willie Nelson - "On the Road Again"</li>
+            <li>Stevie Ray Vaughan - "Pride and Joy"</li>
+            <li>Beyoncé - "Texas Hold 'Em"</li>
+        </ul>
+    </div>
+
+    <!-- Playlist 10: Elizabeth Warren -->
+    <div class="playlist">
+        <h2>Elizabeth Warren's "Persist Playlist"</h2>
+        <p>Empowering pop and rock for the policy-wonk senator.</p>
+        <ul>
+            <li>Pink - "Raise Your Glass"</li>
+            <li>Helen Reddy - "I Am Woman"</li>
+            <li>Survivor - "Eye of the Tiger"</li>
+            <li>Lady Gaga - "Born This Way"</li>
+            <li>Bonnie Raitt - "Something to Talk About"</li>
+        </ul>
+    </div>
+
+    <!-- Playlist 11: Josh Hawley -->
+    <div class="playlist">
+        <h2>Josh Hawley's "Heartland Hymns"</h2>
+        <p>Patriotic and country tunes for the Missouri conservative.</p>
+        <ul>
+            <li>Lee Greenwood - "God Bless the USA"</li>
+            <li>Alan Jackson - "Where Were You (When the World Stopped Turning)"</li>
+            <li>Toby Keith - "Courtesy of the Red, White and Blue"</li>
+            <li>Brooks & Dunn - "Only in America"</li>
+            <li>John Mellencamp - "Sweet Home Indiana"</li>
+        </ul>
+    </div>
+
+    <!-- Playlist 12: Cory Booker -->
+    <div class="playlist">
+        <h2>Cory Booker's "Newark Nights"</h2>
+        <p>Soulful and uplifting tracks for the New Jersey senator.</p>
+        <ul>
+            <li>Stevie Wonder - "Higher Ground"</li>
+            <li>Marvin Gaye - "What's Going On"</li>
+            <li>Alicia Keys - "If I Ain't Got You"</li>
+            <li>Lauryn Hill - "Everything Is Everything"</li>
+            <li>Bill Withers - "Lean on Me"</li>
+        </ul>
+    </div>
+
+    <!-- Playlist 13: Marco Rubio -->
+    <div class="playlist">
+        <h2>Marco Rubio's "Miami Heat"</h2>
+        <p>Latin pop and dance hits for the Florida senator.</p>
+        <ul>
+            <li>Gloria Estefan - "Conga"</li>
+            <li>Pitbull - "Fireball"</li>
+            <li>Shakira - "Hips Don't Lie"</li>
+            <li>Marc Anthony - "Vivir Mi Vida"</li>
+            <li>Enrique Iglesias - "Bailando"</li>
+        </ul>
+    </div>
+
+    <!-- Playlist 14: Amy Klobuchar -->
+    <div class="playlist">
+        <h2>Amy Klobuchar's "Minnesota Mellow"</h2>
+        <p>Indie and folk vibes for the pragmatic Midwestern senator.</p>
+        <ul>
+            <li>Prince - "Purple Rain"</li>
+            <li>The Replacements - "Skyway"</li>
+            <li>Bob Dylan - "Like a Rolling Stone"</li>
+            <li>Bon Iver - "Holocene"</li>
+            <li>Soul Asylum - "Runaway Train"</li>
+        </ul>
+    </div>
+
+    <!-- Playlist 15: Mitt Romney -->
+    <div class="playlist">
+        <h2>Mitt Romney's "Utah Serenade"</h2>
+        <p>Classic and uplifting tunes for the principled Utah senator.</p>
+        <ul>
+            <li>Simon & Garfunkel - "Bridge Over Troubled Water"</li>
+            <li>The Osmonds - "Love Me for a Reason"</li>
+            <li>Journey - "Don't Stop Believin'"</li>
+            <li>Coldplay - "Fix You"</li>
+            <li>John Denver - "Rocky Mountain High"</li>
+        </ul>
+    </div>
+
+    <!-- Playlist 16: Raphael Warnock -->
+    <div class="playlist">
+        <h2>Raphael Warnock's "Georgia Gospel"</h2>
+        <p>Soulful gospel and R&B for the pastor-turned-senator.</p>
+        <ul>
+            <li>Kirk Franklin - "I Smile"</li>
+            <li>Mahalia Jackson - "How I Got Over"</li>
+            <li>OutKast - "Ms. Jackson"</li>
+            <li>CeCe Winans - "Alabaster Box"</li>
+            <li>Gladys Knight - "Midnight Train to Georgia"</li>
+        </ul>
+    </div>
+
+    <!-- Playlist 17: Hakeem Jeffries -->
+    <div class="playlist">
+        <h2>Hakeem Jeffries' "Brooklyn Groove"</h2>
+        <p>Hip-hop and soul for the rising House leader.</p>
+        <ul>
+            <li>Notorious B.I.G. - "Juicy"</li>
+            <li>Mos Def - "Ms. Fat Booty"</li>
+            <li>A Tribe Called Quest - "Can I Kick It?"</li>
+            <li>Common - "The Light"</li>
+            <li>Jay-Z - "Brooklyn's Finest"</li>
+        </ul>
+    </div>
+
+    <!-- Playlist 18: Dick Durbin -->
+    <div class="playlist">
+        <h2>Dick Durbin's "Illinois Classics"</h2>
+        <p>Rock and blues for the seasoned Illinois senator.</p>
+        <ul>
+            <li>Chicago - "25 or 6 to 4"</li>
+            <li>Muddy Waters - "Mannish Boy"</li>
+            <li>Cheap Trick - "Surrender"</li>
+            <li>Smashing Pumpkins - "Tonight, Tonight"</li>
+            <li>Buddy Guy - "Sweet Home Chicago"</li>
+        </ul>
+    </div>
+
+    <!-- Playlist 19: Jim Jordan -->
+    <div class="playlist">
+        <h2>Jim Jordan's "Ohio Grit"</h2>
+        <p>Hard-hitting rock and country for the fiery Ohio congressman.</p>
+        <ul>
+            <li>Kid Rock - "American Bad Ass"</li>
+            <li>Lynyrd Skynyrd - "Sweet Home Alabama"</li>
+            <li>Creed - "My Sacrifice"</li>
+            <li>Rascal Flatts - "Life Is a Highway"</li>
+            <li>Nickelback - "Rockstar"</li>
+        </ul>
+    </div>
+
+    <!-- Playlist 20: Patty Murray -->
+    <div class="playlist">
+        <h2>Patty Murray's "Pacific Northwest Chill"</h2>
+        <p>Indie and grunge for the Washington senator.</p>
+        <ul>
+            <li>Nirvana - "Come As You Are"</li>
+            <li>Pearl Jam - "Alive"</li>
+            <li>Death Cab for Cutie - "I Will Follow You Into the Dark"</li>
+            <li>Modest Mouse - "Float On"</li>
+            <li>Fleet Foxes - "White Winter Hymnal"</li>
+        </ul>
+    </div>
+
+    <!-- Playlist 21: Jon Ossoff -->
+    <div class="playlist">
+        <h2>Jon Ossoff's "Georgia New Wave"</h2>
+        <p>Modern pop and indie for the young Georgia senator.</p>
+        <ul>
+            <li>R.E.M. - "Losing My Religion"</li>
+            <li>Childish Gambino - "This Is America"</li>
+            <li>The Black Keys - "Tighten Up"</li>
+            <li>Vampire Weekend - "A-Punk"</li>
+            <li>Leon Bridges - "River"</li>
+        </ul>
+    </div>
+
+    <!-- Playlist 22: Susan Collins -->
+    <div class="playlist">
+        <h2>Susan Collins' "Maine Mornings"</h2>
+        <p>Folk and soft rock for the moderate Maine senator.</p>
+        <ul>
+            <li>James Taylor - "Carolina in My Mind"</li>
+            <li>Carole King - "You've Got a Friend"</li>
+            <li>Ray LaMontagne - "Trouble"</li>
+            <li>Joni Mitchell - "Big Yellow Taxi"</li>
+            <li>Amos Lee - "Sweet Pea"</li>
+        </ul>
+    </div>
+
+    <!-- Playlist 23: Rand Paul -->
+    <div class="playlist">
+        <h2>Rand Paul's "Libertarian Jukebox"</h2>
+        <p>Eclectic and rebellious tracks for the Kentucky libertarian.</p>
+        <ul>
+            <li>Rush - "Tom Sawyer"</li>
+            <li>Bob Marley - "Get Up, Stand Up"</li>
+            <li>The Who - "Won't Get Fooled Again"</li>
+            <li>Metallica - "Enter Sandman"</li>
+            <li>Neil Young - "Rockin' in the Free World"</li>
+        </ul>
+    </div>
+
+    <!-- Playlist 24: Tim Scott -->
+    <div class="playlist">
+        <h2>Tim Scott's "Carolina Soul"</h2>
+        <p>Uplifting gospel and R&B for the South Carolina senator.</p>
+        <ul>
+            <li>James Brown - "I Got You (I Feel Good)"</li>
+            <li>Al Green - "Love and Happiness"</li>
+            <li>The Winans - "Tomorrow"</li>
+            <li>Etta James - "At Last"</li>
+            <li>Otis Redding - "Try a Little Tenderness"</li>
+        </ul>
+    </div>
+
+    <!-- Playlist 25: Pete Buttigieg -->
+    <div class="playlist">
+        <h2>Pete Buttigieg's "Midwest Mixtape"</h2>
+        <p>Pop and indie for the former mayor turned Transportation Secretary.</p>
+        <ul>
+            <li>John Mellencamp - "Small Town"</li>
+            <li>Sufjan Stevens - "Chicago"</li>
+            <li>The Killers - "Mr. Brightside"</li>
+            <li>Ben Folds - "Still Fighting It"</li>
+            <li>Jack Johnson - "Better Together"</li>
+        </ul>
+    </div>
+
 </body>
 </html>
